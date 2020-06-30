@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title> REPORT OF THE STAR WEBSITE </title>
+    </head>
+    <body> 
+        <span style="white-space:pre-line;"> 
+        <h1> REPORT OF THE STAR WEBSITE </h1>    
+        The star website is an ecommerce website that retials in customizations of the star and the game and merchandise of the same. Game customs include being able 
+        to enlarge the game surface area, increase the star size and the speed of the star. Star customs include changing the appearance of the star, such as a special 
+        christmas star, a cowboy star and a star with facial features. The database used is MongoDB and the database created within is 'shopping',consists of collections
+        such as 'cart', 'order', 'user', 'products'.
+
+        <h1> FRONT END. </h1>
+
+        <h2> Product Search</h2>
+         Product search enables users to search through the products using keywords that have been indexed in the 'products' collection in the database. The search code
+         is in searchResults.php from line 11 to line 280.
+
+         <h2> Search Result Sorting </h2>
+         Search result sorting enables users to filter through the search results in order to get results according to preference. The filter applied then collect the 
+         products from the 'products' collection from the database and display for the user. The location of the code is nameAZ.php from line 1 to line 291. 
+
+         <h2> Shopping Basket </h2>
+         Shopping basket helps users to add products to the basket and view it on myCart.php and it simlataneously adds the products into the 'cart' collection. As users
+         add additional products to the cart, the inserCart.php page update details of the products added to cart and also gives an option of deleting the product if not needed.
+         Once checked out, the products get stored in the 'order' table in the databse and is removed from the 'cart' table. The location of the code is on myCart.php from line 1 to line 275
+         and insertCart.php from line 1 to line 43.
+
+         <h1> CUSTOMER. </h1>
+
+         <h2> Registration and login/logout </h2>
+         The website enables the users to register with the website with necessary details that are validated before entering into the 'user' collection in the database. 
+         With the registered details the user can then log in anytime with the given username and password. The registration code is stored in registerPage.php where the user
+         can register with their details, when these details are submitted the procssing of the code is done in register.php and then stored in 'user' collection. The users are
+         not allowed to acces this page unless the user is logged out. The code is stored in two different locations, register.php which is from line 1 to line 64, and registerPage.php  
+         which is from line 1 to line 234. The login code is stored in 3 pages, loginPage.php where the user can enter the registered details and log in, login.php carries the data
+         from the loginPage.php and denies access if invalid details are entered and logout.php that processes the code for when users click the logout button     
+
+         <h2> Edit Customer Details </h2>
+         The user can modify details entered while registering by going to the updateuserPage.php, once the details have been entered, the details are passed to the updateUser.php
+         page where the modifications are later updated in the 'user' collection. The code is located in two different pages, updateuserPage.php, from line 1 to line 183 and 
+         updateUser.php, from line 1 to line 43. 
+
+         <h2> Order History </h2>
+         The user can check the previous orders by going to the orderHistory.php page that can be navigated from the navbar. The page pulls data from the database from the 'order'
+         collection and displays previous orders for the user. The code is stored in orderHistory.php from line 1 to line 270. 
+
+         <h2> Recommendation </h2>
+         Once the user clicks check out, the recommendations.php recommends products to the user from the same category the products checked out were. The code is stored in
+         recommendations.php and is from line 1 to line 
+
+         <h1> MongoDB </h1>
+
+         The 'shopping database' holds four collections as listed below:
+         1. user
+         2. products
+         3. cart
+         4. order
+
+         <h2> 3rd-party library: Bootstrap </h2>
+         The library we used for the front end is Bootstrap. You refer to the website : https://getbootstrap.com/docs/4.0/getting-started/introduction/ . This library's main purpose is to 
+         help us make our front end look better. Bootsrap porvides its own class and id's. It helps to provide you with a better layout. We used it on all our pages to keep out formmting similar on all the pages.
+        
+    </span>
+    </body>
+</html>
